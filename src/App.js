@@ -14,13 +14,17 @@ function App() {
 
   function yazdir(){
     console.log(value);
-    const data=[
-      {value},
-      {value2},
-      {value3},
-      {value4} 
-      ];
-      console.log(data);
+    setdata([
+      {name:"deneme1",
+      uv: value},
+      {name:"deneme2",
+      uv: value2},
+      {name:"deneme3",
+      uv:value3},
+      {name:"deneme4",
+      uv:value4} 
+      ]);
+      
   }
   return(
     <div>
@@ -31,9 +35,9 @@ function App() {
 
       <button onClick={yazdir}>tikla</button>
 
-   
-      <Grafikbir></Grafikbir>
-      kj
+
+      <Grafikbir values={data}></Grafikbir>
+      
     </div>
   )
 }
